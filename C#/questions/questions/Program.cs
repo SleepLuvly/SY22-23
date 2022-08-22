@@ -78,7 +78,7 @@ namespace questions
                 Console.ReadLine();
             }
             Console.WriteLine("Final score = " + score);
-            Console.ReadLine();
+            Console.ReadLine(); 
         }
     }
 }
