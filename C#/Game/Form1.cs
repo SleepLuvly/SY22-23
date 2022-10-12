@@ -30,7 +30,7 @@ namespace Game
             c.Add(p2);
             c.Add(b1);
         }
-        
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -95,7 +95,6 @@ namespace Game
             }
 
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (progressBar1.Value < progressBar1.Maximum)
@@ -103,8 +102,12 @@ namespace Game
             // let the canvas do all the work
             c.tick();
         }
-
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (player.Bounds.IntersectsWith(player2.Bounds))
+            {
+                MessageBox.Show("You Lost");
+            }
+        }
     }
-
 }
